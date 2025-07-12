@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  padding: 73px 35px;
+  background-color: #F6F5F6;
+}
+
+ul {
+  list-style: none;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  gap: 32px;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1114px;
+}
+
+.card {
+  padding: 32px;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  position: relative;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  gap: 16px;
+  z-index: 2;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card header > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 17px;
+}
+
+.card header > div img {
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  border: 2px solid transparent;
+}
+
+.card header > div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+}
+
+.card header > div div .name {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 0.8125rem;
+  line-height: 110%;
+  letter-spacing: 0px;
+}
+
+.card header > div div > span:last-child {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 0.6875rem;
+  line-height: 110%;
+  letter-spacing: 0px;
+}
+
+.card header h2 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 1.25rem;
+  line-height: 120%;
+  letter-spacing: 0px;
+}
+
+.card blockquote {
+  margin-top: 16px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 0.8125rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+
+.card.purple {
+  background-color: #733fc8;
+}
+
+.card.purple img {
+  border-color: #a775f1;
+}
+
+.card.purple .name {
+  color: #ffffff;
+}
+
+.card.purple .name + span {
+  color: #ede4ff;
+}
+
+.card.purple h2 {
+  color: #ffffff;
+}
+
+.card.purple blockquote {
+  color: #ede4ff;
+}
+
+.card.grey {
+  background-color: #48556a;
+}
+
+.card.grey img {
+  border-color: unset;
+}
+
+.card.grey .name {
+  color: #ffffff;
+}
+
+.card.grey .name + span {
+  color: #48556a;
+}
+
+.card.grey h2 {
+  color: #ffffff;
+}
+
+.card.grey blockquote {
+  color: #e7eaee;
+}
+
+.card.white {
+  background-color: #ffffff;
+}
+
+.card.white img {
+  border-color: unset;
+}
+
+.card.white .name {
+  color: #48556a;
+}
+
+.card.white .name + span {
+  color: #676d7e;
+}
+
+.card.white h2 {
+  color: #48556a;
+}
+
+.card.white blockquote {
+  color: #676d7e;
+}
+
+.card.dark {
+  background-color: #19202d;
+}
+
+.card.dark img {
+  border-color: #a775f1;
+}
+
+.card.dark .name {
+  color: #ffffff;
+}
+
+.card.dark .name + span {
+  color: #ffffff;
+}
+
+.card.dark h2 {
+  color: #cfcfcf;
+}
+
+.card.dark blockquote {
+  color: #e7eaee;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-top: 83px;
+  }
+  .grid {
+        grid-template-areas: "first first" "second third" "fourth fourth" "fifth fifth";
+  }
+  .first {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: first;
+  }
+  .second {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: second;
+  }
+  .third {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: third;
+  }
+  .fourth {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: fourth;
+  }
+  .fifth {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: fifth;
+  }
+  .card.quote_img::after {
+    content: url("./../images/bg-pattern-quotation.svg");
+    position: absolute;
+    top: 0;
+    right: 167px;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    padding-top: 229px;
+  }
+  .grid {
+        grid-template-areas: "first first second fifth" "third fourth fourth fifth";
+  }
+}
+/*# sourceMappingURL=styles.css.map */
